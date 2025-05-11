@@ -3,9 +3,20 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "snagtt-f-a": {
+    "smagtt-f-a": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,13 +24,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/snagtt-f-a",
+            "outputPath": "dist/smagtt-f-a",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
@@ -27,7 +39,6 @@
               }
             ],
             "styles": [
-              "src/custom-theme.scss",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -65,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "snagtt-f-a:build:production"
+              "buildTarget": "smagtt-f-a:build:production"
             },
             "development": {
-              "buildTarget": "snagtt-f-a:build:development"
+              "buildTarget": "smagtt-f-a:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,6 +95,7 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
@@ -100,6 +112,6 @@
     }
   },
   "cli": {
-    "analytics": "0b2b80c6-858e-4a77-a0c3-177e9bd777f6"
+    "analytics": "e30f75b1-cdd0-4e01-84ac-4f0b6ec06733"
   }
 }
