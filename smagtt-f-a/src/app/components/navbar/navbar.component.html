@@ -1,0 +1,20 @@
+<!-- Top Navbar -->
+<mat-toolbar color="primary" class="fixed top-0 left-0 w-full z-50 flex justify-between px-6 h-16">
+  <!-- Mini FAB for Sidebar Toggle -->
+  <button mat-mini-fab color="accent" (click)="toggleSidebar()" aria-label="Toggle Sidebar">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <!-- App Title -->
+  <span class="text-xl font-semibold ml-4">SMAGTT</span>
+
+  <!-- Right-side Buttons -->
+  <div class="flex gap-4 items-center">
+    <button mat-button class="text-white">Home</button>
+    <button mat-button class="text-white">About</button>
+    <button mat-button class="text-white">Contact</button>
+    <button mat-icon-button aria-label="Account">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
