@@ -7,21 +7,27 @@
   <div class="flex flex-1 overflow-hidden ">
 
     <!-- Sidebar (toggle visibility) -->
-    <aside *ngIf="sidebarOpen" class="w-64 bg-gray-800 text-white p-4 pt-20 fixed top-0 left-0 h-screen z-40 rounded-lg">
+    <aside *ngIf="sidebarOpen"
+      class="w-64 bg-gray-800 text-white p-4 pt-20 fixed top-0 left-0 h-screen z-40 rounded-lg">
       <h2 class="text-lg font-bold mb-4">Sidebar</h2>
       <ul class="space-y-2">
         <li><a href="#" class="block p-2 hover:bg-gray-700 rounded">Dashboard</a></li>
-        <li><a href="#" class="block p-2 hover:bg-gray-700 rounded">Trades</a></li>
+        <!-- <li><a href="#" class="block p-2 hover:bg-gray-700 rounded">Trades</a></li> -->
+        <li><a routerLink="add_trade" routerLinkActive="bg-gray-700 text-white"
+            [routerLinkActiveOptions]="{ exact: true }" class="block p-2 rounded hover:bg-gray-600 transition">
+            Trade
+          </a>
+        </li>
         <li><a href="#" class="block p-2 hover:bg-gray-700 rounded">Strategies</a></li>
         <li><a href="#" class="block p-2 hover:bg-gray-700 rounded">Reports</a></li>
       </ul>
     </aside>
 
-    
+
     <!-- Main Content Area (pushed right if sidebar is open) -->
     <div [class.ml-64]="sidebarOpen" class="flex-1 pt-16 bg-gray-100 overflow-auto transition-all duration-300">
       <main class="flex flex-col items-center space-y-20 p-1  bg-red-200">
-      <!-- Main content goes here -->
+        <!-- Main content goes here -->
         <router-outlet></router-outlet>
       </main>
       <!-- Child routes -->

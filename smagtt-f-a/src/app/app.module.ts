@@ -12,25 +12,38 @@ import { FooterComponent } from './components/footer/footer.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { UserComponent } from './components/user/user/user.component';
 import { UserAddComponent } from './components/usermodule/user-add/user-add.component';
+import { AddTradeComponent } from './components/usermodule/Trade/add-trade/add-trade.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
     UserComponent,
-    UserAddComponent
+    UserAddComponent,
+    AddTradeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-      MatToolbarModule,
+    MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
-     provideHttpClient(withFetch()),
+    provideHttpClient(withFetch()),
   ],
   bootstrap: [AppComponent]
 })
