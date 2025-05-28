@@ -17,70 +17,12 @@
       </ul>
     </aside>
 
+    
     <!-- Main Content Area (pushed right if sidebar is open) -->
     <div [class.ml-64]="sidebarOpen" class="flex-1 pt-16 bg-gray-100 overflow-auto transition-all duration-300">
-      <main class="flex flex-col items-center space-y-8 p-8">
-        <!-- Header -->
-        <h1 class="text-3xl font-bold">Share Market Analysis Dashboard</h1>
-
-        <!-- Key Metrics -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
-          <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-            <h3 class="text-xl font-semibold">Total Trades</h3>
-            <p class="text-3xl font-bold">128</p>
-          </div>
-          <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-            <h3 class="text-xl font-semibold">Total Profit</h3>
-            <p class="text-3xl font-bold">$2,345</p>
-          </div>
-          <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-            <h3 class="text-xl font-semibold">Active Strategies</h3>
-            <p class="text-3xl font-bold">3</p>
-          </div>
-        </div>
-
-        <!-- Chart Placeholder -->
-        <div class="w-full h-80 bg-gray-200 rounded-lg p-6">
-          <h2 class="text-xl font-semibold mb-4">Stock Price Trends</h2>
-          <div class="bg-blue-500 w-full h-full rounded-lg flex items-center justify-center text-white">
-            Chart Area
-          </div>
-        </div>
-
-        <!-- Recent Trades Table -->
-        <div class="w-full bg-white shadow-lg rounded-lg p-6">
-          <h2 class="text-xl font-semibold mb-4">Recent Trades</h2>
-          <table class="w-full table-auto">
-            <thead>
-              <tr>
-                <th class="p-2 border-b">Date</th>
-                <th class="p-2 border-b">Stock</th>
-                <th class="p-2 border-b">Action</th>
-                <th class="p-2 border-b">Profit/Loss</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-2">2025-05-11</td>
-                <td class="p-2">AAPL</td>
-                <td class="p-2">Buy</td>
-                <td class="p-2 text-green-500">$250</td>
-              </tr>
-              <tr>
-                <td class="p-2">2025-05-10</td>
-                <td class="p-2">TSLA</td>
-                <td class="p-2">Sell</td>
-                <td class="p-2 text-red-500">-$120</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Active Strategy -->
-        <div class="bg-white shadow-lg rounded-lg p-6 w-full">
-          <h2 class="text-xl font-semibold mb-4">Active Strategy: Moving Average</h2>
-          <p class="text-lg">Analyzing stock movement with a 50-day simple moving average.</p>
-        </div>
+      <main class="flex flex-col items-center space-y-20 p-1  bg-red-200">
+      <!-- Main content goes here -->
+        <router-outlet></router-outlet>
       </main>
       <!-- Child routes -->
       <router-outlet></router-outlet>

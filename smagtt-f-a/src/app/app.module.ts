@@ -10,11 +10,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { UserComponent } from './components/user/user/user.component';
+import { UserAddComponent } from './components/usermodule/user-add/user-add.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    UserComponent,
+    UserAddComponent
   ],
   imports: [
     BrowserModule,
